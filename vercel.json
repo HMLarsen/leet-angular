@@ -3,12 +3,6 @@
 	"public": true,
 	"name": "leet",
 	"devCommand": "npm run serve:ssr:leet",
-	"rewrites": [
-		{
-			"source": "/(.*)",
-			"destination": "/api"
-		}
-	],
 	"functions": {
 		"api/index.js": {
 			"includeFiles": "dist/leet/**"
