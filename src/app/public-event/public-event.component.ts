@@ -1,5 +1,5 @@
 import { Component, ExperimentalPendingTasks, inject, makeStateKey, OnInit, signal, TransferState } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Event } from '../model/event.model';
@@ -22,6 +22,7 @@ export class PublicEventComponent implements OnInit {
 	private readonly eventService = inject(EventService);
 	private readonly utilsService = inject(UtilsService);
 	private readonly title = inject(Title);
+	private readonly meta = inject(Meta);
 
 	private serverEventSubscription?: Subscription;
 
@@ -52,6 +53,7 @@ export class PublicEventComponent implements OnInit {
 				next: eventDoc => {
 					if (eventDoc) {
 						this.title.setTitle(eventDoc.name);
+						this.meta.updateTag({ name: 'twitter:title', content: this.title.getTitle() });
 						this.transferState.set(eventKey, eventDoc);
 					}
 					taskCleanup();
