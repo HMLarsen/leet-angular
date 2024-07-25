@@ -1,0 +1,17 @@
+@if (loadingUser) {
+loading...
+} @else if (!user) {
+<button (click)="loginGoogle()">
+	Entrar com Google
+</button>
+} @else {
+Bem-vindo(a) de volta, {{ user.displayName }}
+<br>
+<button (click)="goToDashboard()">
+	Ir para Dashboard
+</button>
+<br>
+<button (click)="logout()">
+	Sair
+</button>
+}

@@ -1,0 +1,16 @@
+<section>
+	<h1>Eventos</h1>
+	@defer (when !loadingEvents) {
+	<ul>
+		@for (event of events; track event.id) {
+		<li>
+			<a [routerLink]="event.id">
+				{{event.id}}
+			</a>
+		</li>
+		}
+	</ul>
+	} @placeholder {
+	<p>loading...</p>
+	}
+</section>
