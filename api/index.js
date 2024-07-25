@@ -1,2 +1,3 @@
-export default import('../dist/leet/server/server.mjs')
-  .then(module => module.app());
+import { app } from '../dist/leet/server/server.mjs';
+
+export default app();
