@@ -1,3 +1,3 @@
-const server = import('../dist/leet/server/main.server.mjs');
+const server = import('../dist/leet/server/server.mjs');
 
 module.exports = server.app;
