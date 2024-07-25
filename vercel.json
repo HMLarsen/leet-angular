@@ -2,7 +2,6 @@
 	"version": 2,
 	"public": true,
 	"name": "leet",
-	"devCommand": "npm run serve:ssr:leet",
 	"functions": {
 		"api/index.js": {
 			"includeFiles": "dist/leet/**"
