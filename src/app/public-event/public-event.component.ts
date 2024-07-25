@@ -53,7 +53,7 @@ export class PublicEventComponent implements OnInit {
 				next: eventDoc => {
 					if (eventDoc) {
 						this.title.setTitle(eventDoc.name);
-						this.meta.updateTag({ name: 'twitter:title', content: this.title.getTitle() });
+						this.meta.updateTag({ name: 'og:title', content: this.title.getTitle() });
 						this.transferState.set(eventKey, eventDoc);
 					}
 					taskCleanup();
