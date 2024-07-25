@@ -2,6 +2,12 @@
 	"version": 2,
 	"public": true,
 	"name": "leet",
+	"rewrites": [
+		{
+			"source": "/(.*)",
+			"destination": "/api"
+		}
+	],
 	"functions": {
 		"api/index.js": {
 			"includeFiles": "dist/leet/**"
