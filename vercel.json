@@ -2,6 +2,7 @@
 	"version": 2,
 	"public": true,
 	"name": "leet",
+	"region": "gru1",
 	"rewrites": [
 		{
 			"source": "/(.*)",
